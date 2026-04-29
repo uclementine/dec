@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><span data-i18n="contactUs">Contact Us</span> - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="new.css">
+    <style>
+        /* Modern Contact Form Styles */
+        .modern-input {
+            background-color: rgba(26, 26, 26, 0.7) !important;
+            border: 2px solid #0099ff !important;
+            color: #fff !important;
+            border-radius: 8px;
+            padding: 12px 16px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .modern-input::placeholder {
+            color: #666;
+        }
+
+        .modern-input:focus {
+            background-color: rgba(26, 26, 26, 0.9) !important;
+            border-color: #00ccff !important;
+            color: #fff;
+            box-shadow: 0 0 0 0 rgba(0, 153, 255, 0.3);
+            outline: none;
+        }
+
+        .form-label {
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Subject Checkboxes Styles */
+        .subject-checkboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 15px;
+            background-color: rgba(26, 26, 26, 0.5);
+            border: 2px solid #0099ff;
+            border-radius: 8px;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-check-input {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            margin-top: 0;
+            border: 2px solid #0099ff;
+            background-color: transparent;
+            cursor: pointer;
+            accent-color: #0099ff;
+        }
+
+        .form-check-input:checked {
+            background-color: #0099ff;
+            border-color: #0099ff;
+        }
+
+        .form-check-label {
+            margin-bottom: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Contact Cards */
+        .contact-card {
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.05), rgba(0, 204, 255, 0.03));
+            border: 2px solid #0099ff;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .contact-card:hover {
+            border-color: #00ccff;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 153, 255, 0.2);
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.1), rgba(0, 204, 255, 0.08));
+        }
+
+        .contact-card-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #0099ff, #00ccff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .contact-card-icon {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 8px 20px rgba(0, 153, 255, 0.4);
+        }
+
+        /* Modern Form Wrapper */
+        .modern-form-wrapper {
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.05), rgba(0, 204, 255, 0.03));
+            border: 2px solid #0099ff;
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.05), rgba(0, 204, 255, 0.03));
+            border: 2px solid #0099ff;
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+        }
+
+        .info-item {
+            padding: 1rem;
+            background: rgba(0, 153, 255, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            background: rgba(0, 153, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        /* Social Icons Modern */
+        .social-icons-modern {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .social-icon-btn {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 2px solid #0099ff;
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.1), rgba(0, 204, 255, 0.05));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #00ccff;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .social-icon-btn i {
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon-btn:hover {
+            border-color: #00ccff;
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.15), rgba(0, 204, 255, 0.1));
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 153, 255, 0.3);
+            color: #00ccff;
+        }
+
+        .social-icon-btn:hover i {
+            transform: scale(1.2);
+        }
+
+        /* Maps Container */
+        .maps-container {
+            transition: all 0.3s ease;
+        }
+
+        .maps-container:hover {
+            box-shadow: 0 15px 50px rgba(0, 153, 255, 0.3) !important;
+            border-color: #00ccff;
+        }
+
+        .maps-container iframe {
+            transition: all 0.3s ease;
+        }
+
+        .maps-container:hover iframe {
+            filter: brightness(1.05);
+        }
+        .contact-hero {
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .modern-form-wrapper,
+            .info-box,
+            .contact-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .social-icon-btn {
+                width: 100px;
+                height: 100px;
+                font-size: 0.85rem;
+            }
+
+            .social-icon-btn i {
+                font-size: 1.8rem;
+            }
+
+            .ps-lg-4 {
+                padding-left: 0 !important;
+            }
+        }
+
+        /* Beautiful Background */
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%);
+            background-attachment: fixed;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 153, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 204, 255, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        main, footer, header, section {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Contact Hero */
+        .contact-hero {
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.05) 0%, rgba(0, 204, 255, 0.03) 100%);
+            border-top: 3px solid #0099ff;
+            border-bottom: 2px solid rgba(0, 153, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 153, 255, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <header class="header-area shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-teal" href="index.html">
+                <i class="fas fa-code me-2"></i>CLEMENTINE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active text-teal" href="about.html" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html" data-i18n="skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="project.html" data-i18n="project">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portifolio.html" data-i18n="portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="contact"><span data-i18n="contactUs">Contact Us</span></a></li>
+                </ul>
+                <div class="theme-language-controls ms-3">
+                    <button id="themeToggle" class="btn btn-sm theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+                    <button id="languageToggle" class="btn btn-sm language-toggle-btn" type="button" onclick="cycleLanguage()" aria-label="Switch language">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="site-main">
+        <!-- Hero Section -->
+        <section class="contact-hero py-5" style="background: linear-gradient(135deg, rgba(0, 153, 255, 0.1), rgba(0, 204, 255, 0.05)); border-bottom: 2px solid #0099ff;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold text-info mb-3">Let's Work Together</h1>
+                        <p class="lead text-light mb-4">
+                            Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+                        </p>
+                        <p class="text-secondary">
+                            Whether you have a question or just want to say hello, feel free to reach out. I'm always open to discussing new opportunities.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <i class="fas fa-envelope-open" style="font-size: 120px; color: #0099ff; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section py-5">
+            <div class="container">
+                <!-- Contact Info Cards -->
+                <div class="row mb-5">
+                    <div class="col-lg-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5 class="text-info fw-bold mt-3">Phone</h5>
+                            <p class="text-secondary mb-2"><span data-i18n="callMeForQuick">Call me for quick discussions</span></p>
+                            <a href="tel:+250782549594" class="text-info fw-bold text-decoration-none">+250 782 549 594</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5 class="text-info fw-bold mt-3">Email</h5>
+                            <p class="text-secondary mb-2"><span data-i18n="sendMeEmail">Send me an email anytime</span></p>
+                            <a href="mailto:uclementine174@gmail.com" class="text-info fw-bold text-decoration-none">uclementine174@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h5 class="text-info fw-bold mt-3">Location</h5>
+                            <p class="text-secondary mb-2">Busengo, Gakenke District</p>
+                            <a href="https://www.google.com/maps/place/Busengo/@-1.6710796,29.6465201,15z/data=!4m15!1m8!3m7!1s0x19dcf39e3202d463:0x1eceb378ea2a23e9!2sGakenke!3b1!8m2!3d-1.6924232!4d29.742604!16s%2Fm%2F02w93vh!3m5!1s0x19dcf13ba48ced53:0xd6ac5d6a15c8b1ac!8m2!3d-1.6661276!4d29.6644027!16s%2Fg%2F11bwq902n7?entry=ttu&g_ep=EgoyMDI2MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-info fw-bold text-decoration-none">
+                                View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5" style="border-color: #0099ff; opacity: 0.3;">
+
+                <!-- Contact Form & Info Layout -->
+                <div class="row mt-5">
+                    <!-- Form Section -->
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <div class="modern-form-wrapper">
+                            <h3 class="text-info fw-bold mb-4">Send Me a Message</h3>
+                            <form class="contact-form" id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label for="name" class="form-label text-light fw-bold">Full Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control modern-input" id="name" name="name" placeholder="Enter your name" data-i18n-placeholder="enterYourName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label text-light fw-bold">Email Address <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control modern-input" id="email" name="email" placeholder="your@email.com" data-i18n-placeholder="yourEmail" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label text-light fw-bold">Phone Number <span class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control modern-input" id="phone" name="phone" placeholder="+250 782 549 594" data-i18n-placeholder="enterPhone" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label class="form-label text-light fw-bold">Subject <span class="text-danger">*</span></label>
+                                        <div class="subject-checkboxes">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="subject" id="webDesign" value="Web Design">
+                                                <label class="form-check-label text-light" for="webDesign">
+                                                    <span data-i18n="webDesign">Web Design</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="subject" id="webDev" value="Web Development">
+                                                <label class="form-check-label text-light" for="webDev">
+                                                    <span data-i18n="webDevelopment">Web Development</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="subject" id="seo" value="SEO Optimization">
+                                                <label class="form-check-label text-light" for="seo">
+                                                    <span data-i18n="seoOptimization">SEO Optimization</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="subject" id="consultation" value="Consultation">
+                                                <label class="form-check-label text-light" for="consultation">
+                                                    <span data-i18n="consultation">Consultation</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label for="message" class="form-label text-light fw-bold">Message <span class="text-danger">*</span></label>
+                                        <textarea class="form-control modern-input" id="message" name="message" rows="6" placeholder="Tell me about your project..." data-i18n-placeholder="tellMeAbout" required></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-info btn-lg fw-bold w-100" style="border-radius: 8px; padding: 12px; letter-spacing: 0.5px;">
+                                    <i class="fas fa-paper-plane me-2"></i> <span data-i18n="sendMessage">Send Message</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Info Section -->
+                    <div class="col-lg-5 ps-lg-4">
+                        <div class="info-box">
+                            <h4 class="text-info fw-bold mb-4">Quick Response</h4>
+                            <div class="info-item mb-4">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="text-light fw-bold mb-1">Fast Response Time</h6>
+                                        <p class="text-secondary small mb-0">I typically respond within 24 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-4">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="text-light fw-bold mb-1">Professional Service</h6>
+                                        <p class="text-secondary small mb-0">Quality service is my top priority</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-4">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="text-light fw-bold mb-1">Flexible Communication</h6>
+                                        <p class="text-secondary small mb-0">Reach me via email, phone, or social media</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="text-light fw-bold mb-1">Confidentiality</h6>
+                                        <p class="text-secondary small mb-0">Your project details are completely secure</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Social Links Section -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h4 class="text-info fw-bold mb-4">Connect with Me</h4>
+                            <p class="text-secondary mb-4">Connect with me on social media to stay updated with my latest projects</p>
+                            <div class="social-icons-modern">
+                                <a href="https://www.facebook.com/profile.php?id=61552408962862" target="_blank" rel="noopener noreferrer" class="social-icon-btn">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://www.instagram.com/clementine20046/" target="_blank" rel="noopener noreferrer" class="social-icon-btn">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://wa.me/250782549594" target="_blank" rel="noopener noreferrer" class="social-icon-btn">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                                <a href="https://github.com/uclementine" target="_blank" rel="noopener noreferrer" class="social-icon-btn">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5" style="border-color: #0099ff; opacity: 0.3;">
+
+               
+
+                <!-- Google Maps Section -->
+                <div class="row mt-5 pt-4">
+                    <div class="col-12">
+                        <h4 class="text-info fw-bold mb-4">Find Me On The Map</h4>
+                        <div class="maps-container" style="border: 2px solid #0099ff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 153, 255, 0.2);">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8346262155804!2d29.6644027!3d-1.6661276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcf13ba48ced53%3A0xd6ac5d6a15c8b1ac!2sBusengo!5e0!3m2!1sen!2srw!4v1703000000000" 
+                                width="100%" 
+                                height="450" 
+                                style="border: none;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <p class="text-secondary mt-3 text-center">
+                            <i class="fas fa-map-marker-alt text-info me-2"></i>
+                            Busengo, Gakenke District, Rwanda | 
+                            <a href="https://www.google.com/maps/place/Busengo/@-1.6710796,29.6465201,15z/data=!4m15!1m8!3m7!1s0x19dcf39e3202d463:0x1eceb378ea2a23e9!2sGakenke!3b1!8m2!3d-1.6924232!4d29.742604!16s%2Fm%2F02w93vh!3m5!1s0x19dcf13ba48ced53:0xd6ac5d6a15c8b1ac!8m2!3d-1.6661276!4d29.6644027!16s%2Fg%2F11bwq902n7?entry=ttu&g_ep=EgoyMDI2MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-info">
+                                Open Full Map
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(0, 153, 255, 0.1), rgba(0, 204, 255, 0.05)); border-top: 2px solid #0099ff; border-bottom: 2px solid #0099ff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h3 class="text-info fw-bold mb-2" data-i18n="readyToWork">Ready to start your next project?</h3>
+                    <p class="text-light" data-i18n="letWorkTogether">Let's work together to bring your ideas to life!</p>
+                </div>
+                <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
+                    <a href="contact.html" class="btn btn-info btn-lg fw-bold"><i class="fas fa-paper-plane me-2"></i><span data-i18n="getInTouchBtn">Get in Touch</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top" style="border-color: #0099ff;">
+      <div class="container">
+        <div class="row">
+          <!-- Section 1: Store Name -->
+          <div class="col-md-4 mb-4">
+            <h4 class="text-info fw-bold"><i class="fas fa-code"></i> Global Portfolio</h4>
+            <p class="text-secondary mt-3">
+              Your destination for innovative web solutions and digital excellence. 
+              Building quality applications with cutting-edge technologies.
+            </p>
+            <div class="d-flex gap-3 mt-3">
+              <a href="https://www.facebook.com/profile.php?id=61552408962862" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none">
+                <i class="fab fa-facebook-f fs-5"></i>
+              </a>
+              <a href="https://www.instagram.com/clementine20046/" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none">
+                <i class="fab fa-instagram fs-5"></i>
+              </a>
+              <a href="https://wa.me/250782549594" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none">
+                <i class="fab fa-whatsapp fs-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Section 2: Help & Support -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold text-info mb-3">Help & Support</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="index.html" class="text-secondary text-decoration-none">Home</a>
+              </li>
+              <li class="mb-2">
+                <a href="about.html" class="text-secondary text-decoration-none">About Me</a>
+              </li>
+              <li class="mb-2">
+                <a href="portifolio.html" class="text-secondary text-decoration-none">Portfolio</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Section 3: Location & Contact -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold text-info mb-3">Location & Contact</h5>
+            <p class="text-secondary mb-2">
+              <i class="fas fa-map-marker-alt text-info me-2"></i>
+              Kigali, Rwanda
+            </p>
+            <p class="text-secondary mb-2">
+              <i class="fas fa-phone text-info me-2"></i>
+              +250 782 549 594
+            </p>
+            <p class="text-secondary">
+              <i class="fas fa-envelope text-info me-2"></i>
+              uclementine174@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <!-- Section 4: Copyright -->
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-secondary mb-0" style="font-size: 14px;">
+              &copy; 2026 Uwimana Clementine. All rights reserved.
+              <br />
+              <span class="text-light">Built with <span style="color: #ff6b6b;">❤️</span> by Clementine</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/theme-language.js"></script>
+    <script src="js/visitor-counter.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Get selected subjects from checkboxes
+            const subjectCheckboxes = document.querySelectorAll('input[name="subject"]:checked');
+            const subjects = Array.from(subjectCheckboxes).map(cb => cb.value).join(', ');
+            
+            // Validate that at least one subject is selected
+            if (!subjects) {
+                alert('Please select at least one subject');
+                return;
+            }
+            
+            // Format message for WhatsApp (plain text without special formatting)
+            const whatsappMessage = `Hello Clementine! I have a message for you.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nInterested in: ${subjects}\n\nMessage:\n${message}`;
+            
+            // WhatsApp URL - using api.whatsapp.com as primary
+            const whatsappNumber = '250782549594';
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Email link
+            const mailtoLink = `mailto:uclementine174@gmail.com?subject=${encodeURIComponent(`Contact: ${subjects}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInterested in: ${subjects}\n\nMessage:\n${message}`)}`;
+            
+            // Show loading message
+            alert('Opening WhatsApp...');
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappURL, '_blank', 'width=800,height=600');
+            
+            // Open email after a slight delay
+            setTimeout(() => {
+                window.open(mailtoLink);
+            }, 500);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

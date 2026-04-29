@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><span data-i18n="mySkills">Software Development Skills</span></title>
+  <!-- <span data-i18n="frontendTechnologies">Bootstrap</span> CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+
+
+
+
+  
+   <!--<span data-i18n="frontendTechnologies">Bootstrap</span> CSS link-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--font awesome icon link-->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!--css link-->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="new.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+ <header class="header-area shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-teal" href="index.html">
+                <i class="fas fa-code me-2"></i>CLEMENTINE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active text-teal" href="about.html" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html" data-i18n="skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="project.html" data-i18n="project">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portifolio.html" data-i18n="portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="contact">Contact Us</a></li>
+                </ul>
+                <div class="theme-language-controls ms-3">
+                    <button id="themeToggle" class="btn btn-sm theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+                    <button id="languageToggle" class="btn btn-sm language-toggle-btn" type="button" onclick="cycleLanguage()" aria-label="Switch language">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+  <div class="container py-5">
+    <h1 class="text-center mb-4"><span data-i18n="mySkills">Software Development Skills</span></h1>
+
+    <!-- Introductory Paragraph -->
+    <p class="lead text-center mb-5">
+      <span data-i18n="skillsOverview">Below is a categorized overview of my technical skills</span>, covering frontend, backend, DevOps, tools, and UI/UX architecture.
+    </p>
+
+   <h2 class="mb-3"><span data-i18n="frontendTechnologies">Frontend Development</span></h2>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-danger"><i class="fab fa-html5 fa-3x"></i> <i class="fab fa-css3-alt fa-3x"></i></div>
+        <h5 class="card-title"><span data-i18n="frontendTechnologies">HTML & CSS</span></h5>
+        <p class="card-text text-light">Building responsive layouts with semantic HTML and modern CSS frameworks.</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width: 90%">90%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-warning"><i class="fab fa-js fa-3x"></i></div>
+        <h5 class="card-title"><span data-i18n="frontendTechnologies"><span data-i18n="backendTechnologies">Java</span>Script</span></h5>
+        <p class="card-text text-light">Dynamic web applications using ES6+, React, and Angular.</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width: 85%">85%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3" style="color: #7952b3;"><i class="fab fa-bootstrap fa-3x"></i></div>
+        <h5 class="card-title"><span data-i18n="frontendTechnologies">Bootstrap</span></h5>
+        <p class="card-text text-light">Rapid prototyping and responsive design with <span data-i18n="frontendTechnologies">Bootstrap</span> components.</p>
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width: 80%">80%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="mb-3"><span data-i18n="backendTechnologies">Backend Development</span></h2>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-primary"><i class="fab fa-python fa-3x"></i></div>
+        <h5 class="card-title"><span data-i18n="backendTechnologies">Python</span></h5>
+        <p class="card-text text-light">Django and Flask for scalable backend services.</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width: 90%">90%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-danger"><i class="fab fa-java fa-3x"></i></div>
+        <h5 class="card-title"><span data-i18n="backendTechnologies">Java</span></h5>
+        <p class="card-text text-light">Spring Boot for enterprise-grade applications.</p>
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width: 85%">85%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-dark"><i class="fas fa-database fa-3x"></i></div>
+        <h5 class="card-title">SQL</h5>
+        <p class="card-text text-light">Database design, optimization, and queries.</p>
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width: 80%">80%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="mb-3">DevOps & Tools</h2>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-dark"><i class="fab fa-git-alt fa-3x"></i></div>
+        <h5 class="card-title">Git</h5>
+        <p class="card-text text-light">Version control and collaborative workflows.</p>
+        <div class="progress">
+          <div class="progress-bar bg-secondary" style="width: 85%">85%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-primary"><i class="fab fa-docker fa-3x"></i></div>
+        <h5 class="card-title">Docker</h5>
+        <p class="card-text text-light">Containerization and microservices deployment.</p>
+        <div class="progress">
+          <div class="progress-bar bg-primary" style="width: 75%">75%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-success"><i class="fas fa-sync fa-3x"></i></div>
+        <h5 class="card-title">CI/CD</h5>
+        <p class="card-text text-light">Automated pipelines with Jenkins, GitHub Actions.</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width: 70%">70%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="mb-3">UI/UX & Architecture</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-info"><i class="fas fa-bezier-curve fa-3x"></i></div>
+        <h5 class="card-title">UI/UX Design</h5>
+        <p class="card-text text-light">Wireframing, prototyping, and user-centered design principles.</p>
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width: 75%">75%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <div class="mb-3 text-secondary"><i class="fas fa-sitemap fa-3x"></i></div>
+        <h5 class="card-title">Software Architecture</h5>
+        <p class="card-text text-light">Designing scalable, maintainable systems with layered architecture and microservices.</p>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width: 80%">80%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Concluding Paragraph -->
+    <p class="mt-5 text-center">
+      These categories highlight my versatility across the software development lifecycle, from frontend design to backend engineering, DevOps practices, and architectural planning.
+    </p>
+  </div>
+
+
+  <!--footer section-->
+<!-- CTA Section -->
+<section class="py-5" style="background: linear-gradient(135deg, rgba(0, 153, 255, 0.1), rgba(0, 204, 255, 0.05)); border-top: 2px solid #0099ff; border-bottom: 2px solid #0099ff;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h3 class="text-info fw-bold mb-2" data-i18n="readyToWork">Ready to start your next project?</h3>
+                <p class="text-light" data-i18n="letWorkTogether">Let's work together to bring your ideas to life!</p>
+            </div>
+            <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
+                <a href="contact.html" class="btn btn-info btn-lg fw-bold"><i class="fas fa-paper-plane me-2"></i><span data-i18n="getInTouchBtn">Get in Touch</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section text-center py-4">
+<section class="social-media bg-dark text-white py-4">
+  <div class="container text-center">
+    <h5>Follow Me</h5>
+    <p>Uwimana Clementine</p>
+
+    <div class="d-flex justify-content-center gap-4 flex-wrap">
+
+     <a href="https://www.facebook.com/profile.php?id=61552408962862" class="text-decoration-none text-white">
+  <div class="rounded-circle border border-secondary d-flex align-items-center justify-content-center mx-auto"
+       style="width:60px; height:60px;">
+    <i class="fab fa-facebook-f fs-4 text-primary"></i>
+  </div>
+  <small class="d-block mt-2 text-primary">Facebook</small>
+</a>
+
+
+      <a href="https://x.com/Busengo12" class="text-decoration-none text-white">
+        <div class="rounded-circle border border-secondary d-flex align-items-center justify-content-center mx-auto"
+             style="width:60px; height:60px;">
+          <i class="fab fa-twitter fs-4"></i>
+        </div>
+        <small class="d-block mt-2 text-primary">Twitter</small>
+      </a>
+
+      <a href="https://www.instagram.com/clementine20046/" class="text-decoration-none text-white">
+  <div class="rounded-circle border border-secondary d-flex align-items-center justify-content-center mx-auto"
+       style="width:60px; height:60px;">
+    <i class="fab fa-instagram fs-4 text-danger"></i>
+  </div>
+  <small class="d-block mt-2 text-primary">Instagram</small>
+</a>
+
+
+      <a href="https://github.com/uclementine" class="text-decoration-none text-blue">
+        <div class="rounded-circle border border-secondary d-flex align-items-center justify-content-center mx-auto"
+             style="width:60px; height:60px;">
+          <i class="fab fa-github fs-4"></i>
+        </div>
+        <small class="d-block mt-2 text-blue">GitHub</small>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <p class="p-1">&copy; 2026 <span class="span">Clementine Uwimana</span>. All rights reserved.</p>
+  <p class="p-2">Build with ❤️ by Clementine</p>
+</footer>
+  <!-- <span data-i18n="frontendTechnologies">Bootstrap</span> JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/theme-language.js"></script>
+  <script src="js/visitor-counter.js"></script>
+</body>
+</html>

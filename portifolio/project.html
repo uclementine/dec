@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="new.css">
+</head>
+<body><header class="header-area shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-teal" href="index.html">
+                <i class="fas fa-code me-2"></i>CLEMENTINE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html" data-i18n="skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active text-teal" href="project.html" data-i18n="project">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portifolio.html" data-i18n="portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="contact">Contact Us</a></li>
+                </ul>
+                <div class="theme-language-controls ms-3">
+                    <button id="themeToggle" class="btn btn-sm theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+                    <button id="languageToggle" class="btn btn-sm language-toggle-btn" type="button" onclick="cycleLanguage()" aria-label="Switch language">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="site-main">
+        <section class="project-section py-5">
+            <div class="container">
+                <h2 class="text-center text-primary mb-5"><span data-i18n="project">Featured Projects</span></h2>
+
+                <div class="row mb-5">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark border-info h-100">
+                            <div class="card-header bg-info">
+                                <h5 class="card-title mb-0">Project #1: E-Commerce Platform</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-light mb-3">
+                                    <strong>Description:</strong> A complete e-commerce solution with product listings, shopping cart, 
+                                    user authentication, and secure payment processing.
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Technologies:</strong> HTML5, CSS3, JavaScript, PHP, MySQL, Bootstrap, Stripe API
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Duration:</strong> 3 months
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Features:</strong>
+                                    <ul class="text-light">
+                                        <li>Product search and filtering</li>
+                                        <li>Shopping cart functionality</li>
+                                        <li>User registration and login</li>
+                                        <li>Payment gateway integration</li>
+                                        <li>Order tracking system</li>
+                                        <li>Admin dashboard</li>
+                                    </ul>
+                                </p>
+                                <a href="contact.html" class="btn btn-info"><span data-i18n="viewMyWork">View Details</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark border-info h-100">
+                            <div class="card-header bg-info">
+                                <h5 class="card-title mb-0">Project #2: Task Management System</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-light mb-3">
+                                    <strong>Description:</strong> A collaborative task management application that allows teams to manage 
+                                    projects, assign tasks, and track progress in real-time.
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Technologies:</strong> React, Node.js, MongoDB, Express, JWT Authentication
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Duration:</strong> 2 months
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Features:</strong>
+                                    <ul class="text-light">
+                                        <li>Project creation and management</li>
+                                        <li>Task assignment and tracking</li>
+                                        <li>Real-time notifications</li>
+                                        <li>Team collaboration tools</li>
+                                        <li>Progress dashboard</li>
+                                        <li>File attachments</li>
+                                    </ul>
+                                </p>
+                                <a href="contact.html" class="btn btn-info"><span data-i18n="viewMyWork">View Details</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark border-info h-100">
+                            <div class="card-header bg-info">
+                                <h5 class="card-title mb-0">Project #3: Analytics Dashboard</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-light mb-3">
+                                    <strong>Description:</strong> An advanced analytics dashboard providing real-time data visualization 
+                                    and business intelligence insights.
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Technologies:</strong> React, D3.js, Node.js, PostgreSQL, Chart.js, Redux
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Duration:</strong> 4 months
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Features:</strong>
+                                    <ul class="text-light">
+                                        <li>Real-time data visualization</li>
+                                        <li>Custom report generation</li>
+                                        <li>Data filtering and drill-down</li>
+                                        <li>Export functionality (PDF, CSV, Excel)</li>
+                                        <li>User role-based access</li>
+                                        <li>Performance metrics tracking</li>
+                                    </ul>
+                                </p>
+                                <a href="contact.html" class="btn btn-info"><span data-i18n="viewMyWork">View Details</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark border-info h-100">
+                            <div class="card-header bg-info">
+                                <h5 class="card-title mb-0">Project #4: Content Management System</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-light mb-3">
+                                    <strong>Description:</strong> A flexible CMS platform for managing website content, with easy-to-use 
+                                    editors and content scheduling capabilities.
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Technologies:</strong> PHP, MySQL, JavaScript, Bootstrap, jQuery, TinyMCE Editor
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Duration:</strong> 2.5 months
+                                </p>
+                                <p class="text-light mb-3">
+                                    <strong>Features:</strong>
+                                    <ul class="text-light">
+                                        <li>WYSIWYG content editor</li>
+                                        <li>User and permission management</li>
+                                        <li>Content scheduling</li>
+                                        <li>Media library management</li>
+                                        <li>SEO optimization tools</li>
+                                        <li>Backup and recovery</li>
+                                    </ul>
+                                </p>
+                                <a href="contact.html" class="btn btn-info"><span data-i18n="viewMyWork">View Details</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center mt-5">
+                    <div class="col-12">
+                        <h3 class="text-info mb-4">Want to see more projects?</h3>
+                        <a href="portifolio.html" class="btn btn-info btn-lg me-3">View Portfolio</a>
+                        <a href="contact.html" class="btn btn-outline-info btn-lg">Start Your Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(0, 153, 255, 0.1), rgba(0, 204, 255, 0.05)); border-top: 2px solid #0099ff; border-bottom: 2px solid #0099ff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h3 class="text-info fw-bold mb-2" data-i18n="readyToWork">Ready to start your next project?</h3>
+                    <p class="text-light" data-i18n="letWorkTogether">Let's work together to bring your ideas to life!</p>
+                </div>
+                <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
+                    <a href="contact.html" class="btn btn-info btn-lg fw-bold"><i class="fas fa-paper-plane me-2"></i><span data-i18n="getInTouchBtn">Get in Touch</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top" style="border-color: #0099ff;">
+      <div class="container">
+        <div class="row">
+          <!-- Section 1: Store Name -->
+          <div class="col-md-4 mb-4">
+            <h4 class="text-info fw-bold"><i class="fas fa-code"></i> Global Portfolio</h4>
+            <p class="text-secondary mt-3">
+              Your destination for innovative web solutions and digital excellence. 
+              Building quality applications with cutting-edge technologies.
+            </p>
+            <div class="d-flex gap-3 mt-3">
+              <a href="https://www.facebook.com/profile.php?id=61552408962862" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none">
+                <i class="fab fa-facebook-f fs-5"></i>
+              </a>
+              <a href="https://www.instagram.com/clementine20046/" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none">
+                <i class="fab fa-instagram fs-5"></i>
+              </a>
+              <a href="https://wa.me/250782549594" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none">
+                <i class="fab fa-whatsapp fs-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Section 2: Help & Support -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold text-info mb-3">Help & Support</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="contact.html" class="text-secondary text-decoration-none">Contact Us</a>
+              </li>
+              <li class="mb-2">
+                <a href="services.html" class="text-secondary text-decoration-none">Services</a>
+              </li>
+              <li class="mb-2">
+                <a href="index.html" class="text-secondary text-decoration-none">Home</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Section 3: Location & Contact -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold text-info mb-3">Location & Contact</h5>
+            <p class="text-secondary mb-2">
+              <i class="fas fa-map-marker-alt text-info me-2"></i>
+              Kigali, Rwanda
+            </p>
+            <p class="text-secondary mb-2">
+              <i class="fas fa-phone text-info me-2"></i>
+              +250 782 549 594
+            </p>
+            <p class="text-secondary">
+              <i class="fas fa-envelope text-info me-2"></i>
+              uclementine174@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <!-- Section 4: Copyright -->
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-secondary mb-0" style="font-size: 14px;">
+              &copy; 2026 Uwimana Clementine. All rights reserved.
+              <br />
+              <span class="text-light">Built with <span style="color: #ff6b6b;">❤️</span> by Clementine</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/theme-language.js"></script>
+    <script src="js/visitor-counter.js"></script>
+</body>
+</html>
